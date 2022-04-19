@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- This is the Head Section -->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Algo Solver</title>
+
+        <!-- Link to the CSS File -->
+        <link rel="stylesheet" href="css/styles.css">
+    
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="images/logo.webp" type="image/x-icon">
+
+        <!-- Link to the 'styles.css' file -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/styles.css">
+
+        <!-- Bootstrap scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <!-- Fontawesome icons Script -->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    </head>
+
+    <!-- This is the Body Section -->
+    <body>
+
+        <section>
+            <header>
+                <div class="part-1">
+                    <img src="/images/logo.webp" alt="Connect Logo">
+                    <a href="/">
+                        <h1>&lt; Algo Solver /><span class="A">.</span></h1><br>
+                    </a>
+                </div>
+                <div class="part-2">
+                    <ul>
+                        <a href="#banner"><li>&lt; Home /></li></a>
+                        <a href="#algorithm"><li>&lt; Algorithms /></li></a>
+                        <a href="#features"><li>&lt; Features /></li></a>
+                        <a href="#faq"><li>&lt; FAQ /></li></a>
+                        <a href="#contact"><li>&lt; Contact Us /></li></a>
+                    </ul>
+                </div>
+            </header>
+        </section>
+
+        <section id="banner">
+
+            <div id="first" class="odd">
+                <div class="left">
+                    <h2>Solve the Unsolved with <br><span class="auto-input"></span></h2>
+                    <p>
+                        Solve your Cryptography encryption-decryption techniques <br /> all at one place
+                        <br><br>
+                        Fill in the Inputs as per your desired algorithm and get a detailed explanation of the algorithm separately for the encryption and the decryption part.
+                    </p>
+                    <div class="options">
+                        <a href="#title"><button type="button" class="btn btn-danger">Solve Algo</button></a>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="/images/banner.gif" alt="">
+                </div>
+            </div>
+    
+            <div class="title" id="title">
+                <p>Explore what can you do with <span class="A">A</span>lgo Solver</p>
+                <a href="#algorithm"><i class="fas fa-caret-down"></i></a>
+    
+            </div>
+    
+        </section>
+    
+        <section id="algorithm">
+            <div class="row">
+                <div class="wrapper">
+                    <div class="menu">
+                        <select class="form-select" name="" id="algoName">
+                            <option value="0" selected>Select an encryption algorithm</option>
+                            <option value="1">Caesar Cipher</option>
+                            <option value="2">RSA Algorithm</option>
+                            <option value="3">Md5</option>
+                            <option value="4">SHA 256</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="content">
+                        <div class="data default" id="0">
+                            <h3>Select an Algorithm</h3>
+                        </div>
+                        <div class="data" id="1">
+                            <div class="input-output">
+                                <h3 class="algo-title">Caesar Cipher Technique</h3>
+                                <form>
+                                    <div class="row input-container form-row col-md-12">
+                                      <div class="col form-group col-md-9">
+                                        <input type="text" class="form-control" id="caesarText" placeholder="Enter the Text" value="">
+                                      </div>
+                                      <div class="col form-group col-md-3">
+                                        <input type="number" class="form-control" id="caesarKey" placeholder="Enter the key" value="">
+                                      </div>
+                                    </div>
+                                </form>
+                                <div class="technique-option">
+                                    <button type="button" class="btn btn-primary" onclick="caesarEncrypt()">Encrypt</button>
+                                    <button type="button" class="btn btn-primary" onclick="caesarDecrypt()">Decrypt</button>
+                                </div>
+                                
+                                <div class="input-container">
+                                    <div class="" id="caesarOutput"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data" id="2">
+                            <div class="input-output">
+                                <h3 class="algo-title">RSA Algorithm</h3>
+                                <form>
+                                    <div class="row input-container form-row col-md-12">
+                                      <div class="col form-group col-md-4">
+                                        <input type="text" class="form-control" id="rsaP" placeholder="Enter the value of p" value="">
+                                      </div>
+                                      <div class="col form-group col-md-4">
+                                        <input type="number" class="form-control" id="rsaQ" placeholder="Enter the value of q" value="">
+                                      </div>
+                                      <div class="col form-group col-md-4">
+                                        <input type="number" class="form-control" id="rsaM" placeholder="Enter the value of M" value="">
+                                      </div>
+                                    </div>
+                                </form>
+                                <div class="technique-option">
+                                    <button type="button" class="btn btn-primary" onclick="rsaEncrypt()">Encrypt</button>
+                                    <button type="button" class="btn btn-primary" onclick="rsaDecrypt()">Decrypt</button>
+                                </div>
+                                
+                                <div class="input-container">
+                                    <div class="" id="rsaOutput"></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="data" id="3">
+                            <div class="input-output">
+                                <h3 class="algo-title">MD5 Technique</h3>
+                                <form>
+                                    <div class="row input-container form-row col-md-12">
+                                      <div class="col form-group col-md-12">
+                                        <input type="text" class="form-control" id="md5Text" placeholder="Enter the Text" value="">
+                                      </div>
+                                    </div>
+                                </form>
+                                <div class="technique-option">
+                                    <button type="button" class="btn btn-primary" onclick="md5Encrypt()">Encrypt</button>
+                                </div>
+                                
+                                <div class="input-container">
+                                    <div class="" id="md5Output"></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="data" id="4">
+                            <div class="input-output">
+                                <h3 class="algo-title">SHA 256 Technique</h3>
+                                <form>
+                                    <div class="row input-container form-row col-md-12">
+                                      <div class="col form-group col-md-12">
+                                        <input type="text" class="form-control" id="shaText" placeholder="Enter the Text" value="">
+                                      </div>
+                                    </div>
+                                </form>
+                                <div class="technique-option">
+                                    <button type="button" class="btn btn-primary" onclick="shaEncrypt()">Encrypt</button>
+                                </div>
+                                
+                                <div class="input-container">
+                                    <div class="" id="shaOutput"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <section id="features">
+
+            <section class="card-items">
+                <div class="up">
+                    <h2 class="two-title">Features !!!</h2>
+                </div>  
+    
+                <div class="bottom">
+
+                    <div class="cards">  
+            
+                        <div class="info info-1">
+                            <span>
+                                <i class="fas fa-brain"></i> <i class="fas fa-pen"></i>
+                            </span>
+                            <h5>Fill the Inputs <br>Get the Answers</h5>
+                            <p>
+                                Just Fill the inputs of the algorithm and get the answers for your asked algorithm in a fraction of minutes
+                            </p>
+                        </div>
+                
+                        <div class="info info-2">
+                            <span>
+                                <i class="fas fa-brain"></i> <i class="fas fa-pen"></i>
+                            </span>
+                            <h5>Detailed Explanation</h5>
+                            <p>Detailed explanation of four of the most popular encryption decryption techniques namely Caesar Cipher, RSA, MD5 and SHA algorithms</p>
+                        </div>
+                        
+                        <div class="info info-3">
+                            <span>
+                                <i class="fas fa-brain"></i> <i class="fas fa-pen"></i>
+                            </span>
+                            <h5>Online calculators is the new normal</h5>
+                            <p>Verify your hand solve answers with our online calculators anytime, from anywhere in the world</p>
+                        </div>
+                
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+        <section id="faq" style="margin-bottom : 10vh;">
+            <div class = "container">
+                <h2> Frequently Asked Questions <span><i class="fa fa-question" aria-hidden="true"></i></span> </h2>
+
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-item-header"> What is Algo Solver </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                Algo Solver is an one stop application for solving your Cryptography encryption-decryption techniques
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-item-header"> How does Algo Solver Work? </div>
+                        <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                Fill in the Inputs as per your desired algorithm and get a detailed explanation of the algorithm separately for the encryption and the decryption part
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="accordion-item">
+                        <div class="accordion-item-header"> What are the Steps to be followed for encrption or decryption using an algorithm </div>
+                    <div class="accordion-item-body">
+                        <div class="accordion-item-body-content">
+                            <ul style="padding-left: 1rem;">
+                                <li> Select the technique from the select dropbox</li>
+                                <li>Filled in the asked input values for the given algorithm and then click on encrypt or decrypt as per required</li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+
+            <div class="Container">
+
+                <div class="contactinfo">
+                    <div>
+                        <h2>Contact Us</h2>
+                        <ul class="info">
+                            <li>
+                                <span><i class="fas fa-map-marker-alt"></i></span>
+                                <span>
+                                    Linking Road <br>
+                                    Los Angeles, CA <br>
+                                    900017
+                                </span>
+                            </li>
+                            <li>
+                                <span><i class="fas fa-envelope"></i></span>
+                                <span>siddheshmane025@gmail.com</span>
+                            </li>
+                            <li>
+                                <span><i class="fas fa-phone-alt"></i></span>
+                                <span>+91-7710914875</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="sci">
+                        <li><a  style="color: #fff;" href="http://" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a  href="http://" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li><a  href="http://" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                    </ul>
+                </div>
+                
+                <div class="contactForm">
+                    <h2>Send a Message</h2>
+
+                    <form class="formBox" action="javascript:alert('Message Sent')">
+                        <div class="inputBox w50">
+                            <input type="text" name="" id="" required>
+                            <span>First Name</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="text" name="" id="" required>
+                            <span>Last Name</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="email" name="" id="" required>
+                            <span>Email Address</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="tel" name="" id="" required>
+                            <span>Mobile No</span>
+                        </div>
+                        <div class="inputBox w100">
+                            <textarea name="" id=""></textarea>
+                            <span>Write a Message</span>
+                        </div>
+                        <div class="inputBox w100">
+                            <input type="submit" value="Send">
+                        </div>
+                    </form>
+
+                </div>
+                
+            </div>
+
+            <div class="up">
+                <a href="#"><i class="fas fa-arrow-circle-up"></i></a>
+            </div>
+
+        </section>
+
+        <script>
+            const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+
+            accordionItemHeaders.forEach(accordionItemHeader => {
+            accordionItemHeader.addEventListener("click", event => {
+    
+            accordionItemHeader.classList.toggle("active");
+            const accordionItemBody = accordionItemHeader.nextElementSibling;
+            if(accordionItemHeader.classList.contains("active")) {
+                accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+            }
+            else {
+                accordionItemBody.style.maxHeight = 0;
+             }
+           });
+         });
+        </script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="js/md5.min.js"></script>
+
+        
+        <script>
+            var typed = new Typed(".auto-input", { strings: ["Algo Solver"], typedSpeed: 100, backSpeed: 200, loop: true});
+        </script>
+
+        <script>
+            $(document).ready(function(){
+                $("#algoName").on("change", function(){
+                    $(".data").hide();
+                    $("#" + $(this).val()).fadeIn(700);
+                }).change();
+            });
+        </script>
+
+        
+        
+        <!-- Link to the JS File -->
+        <script src="js/caesarCipher.js"></script>
+        <script src="js/md5.js"></script>
+        <script src="js/sha256.js"></script>
+        <script src="js/rsa.js"></script>
+
+    </body>
+
+</html>
